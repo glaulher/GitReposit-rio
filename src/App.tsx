@@ -1,9 +1,16 @@
 import React from 'react';
-// import Routes from './routes';
+import { BrowserRouter } from 'react-router-dom';
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-function App() {
-  return <h1>Olá</h1>;
-}
+import Routes from './routes';
+import GlobalStyle from './styles/global';
+
+const App: React.FC = () => (
+  <>
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
+    <GlobalStyle />
+  </>
+);
 
 export default App;
